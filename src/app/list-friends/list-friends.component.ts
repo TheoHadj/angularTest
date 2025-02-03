@@ -10,12 +10,11 @@ import { timer } from 'rxjs';
 })
 
 export class ListFriendsComponent {
-
-  onInit(){
-    let disabled = false;
-
+  public disabled : boolean= false;
+  
+  ngOnInit(){
     timer(3000).subscribe(() => {
-      disabled = true;
+      this.disabled = true;
     });
   }
 }

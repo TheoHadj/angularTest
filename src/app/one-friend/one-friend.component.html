@@ -1,0 +1,14 @@
+<p>one-friend works!</p>
+
+
+
+
+<div class="friend-card">
+    <h3>{{ friend.name }}</h3>
+    <h6>ID: {{ friend.id }}</h6>
+    <p>Age : {{ friend.age }}</p>
+    <p>Status : {{getOneFriendStatus()}}</p>
+    <p>Bio : {{ friend.bio }}</p>
+  
+    <p [innerHTML]="friend.xss"></p>
+  </div>

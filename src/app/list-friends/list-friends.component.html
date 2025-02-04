@@ -12,4 +12,5 @@
 </ng-template>
 <!-- <p> {{abc}}</p> -->
 
-<app-one-friend></app-one-friend>
+
+<app-one-friend *ngFor="let friend of friends"[friend]="friend"></app-one-friend>

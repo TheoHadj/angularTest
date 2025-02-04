@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgStyle } from '@angular/common';
 
 @Component({
@@ -8,10 +8,11 @@ import { NgStyle } from '@angular/common';
   styleUrl: './one-friend.component.css'
 })
 export class OneFriendComponent {
+  
+  @Input() friend!: { id: number, name: string, age: number, status: string, bio: string, xss: string };
 
-  friend = { id: 1, name: 'Alice', age: 25, status: 'Online', bio: 'Aime le développement web', xss: "<script>alert('Hello, XSS')</script>" }
   unAmiStatus = true;
-  constructor() { 
+  constructor(){
     if(Math.random() < 0.5){
       this.unAmiStatus = false;
   }
@@ -33,4 +34,5 @@ export class OneFriendComponent {
   getOneFriendStatus(){
     return this.friend.status;
   }
+
 }

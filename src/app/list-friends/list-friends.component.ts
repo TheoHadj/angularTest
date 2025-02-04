@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { OneFriendComponent } from '../one-friend/one-friend.component';
 import { timer } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-friends',
-  imports: [OneFriendComponent],
+  imports: [OneFriendComponent, CommonModule, FormsModule],
   templateUrl: './list-friends.component.html',
   styleUrl: './list-friends.component.css'
 })
@@ -15,6 +16,7 @@ export class ListFriendsComponent {
   public name : string="";
   public clicked = false;
   public abc :string  ="Aucun ami";
+  public value :string  ="";
 
   ngOnInit(){
     timer(3000).subscribe(() => {
@@ -30,8 +32,9 @@ export class ListFriendsComponent {
   }
   btnClick(){
     console.log("clicked");
-    this.clicked=true;
-    this.abc ="Ami ajouté : " + this.name;
+    // this.clicked=true;
+    // this.abc ="Ami ajouté : " + this.name;
+    this.value = '';
   }
 
 }

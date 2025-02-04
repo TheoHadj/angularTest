@@ -1,9 +1,12 @@
 <p>list-friends works!</p>
 
-<button [disabled]="disabled" (click)="btnClick()"> Button</button>
-<input type="text" (input)="onInput($event)">
+<button [disabled]="value == '' " (click)="btnClick()"> Button</button>
+<!-- <input type="text" (input)="onInput($event)"> -->
+<input type="text" [(ngModel)]="value" >
+<p> {{value}}</p>
+
 
 <!-- <p *ngIf="clicked">votre ami {{name}} a été ajouté</p>-->
-<p> {{abc}}</p>
+<!-- <p> {{abc}}</p> -->
 
 <app-one-friend></app-one-friend>

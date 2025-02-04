@@ -1,6 +1,9 @@
 <p>list-friends works!</p>
 
-<button [disabled]="disabled"> Button
+<button [disabled]="disabled" (click)="btnClick()"> Button</button>
+<input type="text" (input)="onInput($event)">
 
-</button>
+<!-- <p *ngIf="clicked">votre ami {{name}} a été ajouté</p>-->
+<p> {{abc}}</p>
+
 <app-one-friend></app-one-friend>

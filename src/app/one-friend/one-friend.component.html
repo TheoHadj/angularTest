@@ -1,9 +1,20 @@
 <p>one-friend works!</p>
 
+<!-- <body *ngIf="!unAmiStatus;else elseStatus" style="background-color: red;"></body>
+    
 
+<ng-template #elseStatus>
+  <body  style="background-color: rgb(0, 255, 85);"></body>
 
+</ng-template> -->
 
-<div class="friend-card">
+<!-- <ng-template *ngStyle="{'background-color': unAmiStatus ? 'red' : 'green'}">
+  <body>
+    
+  </body> </ng-template> -->
+
+  <div class="friend-card" [ngStyle]="{'background-color': unAmiStatus ? 'red' : 'green'}">
+<!-- <div class="friend-card" [ngStyle]="{'background-color': getColor()}"> -->
     <h3>{{ friend.name }}</h3>
     <h6>ID: {{ friend.id }}</h6>
     <p>Age : {{ friend.age }}</p>

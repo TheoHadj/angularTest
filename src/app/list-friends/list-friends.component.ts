@@ -32,7 +32,7 @@ export class ListFriendsComponent {
   }
   btnClick(){
     console.log("clicked");
-    // this.clicked=true;
+    this.clicked=true;
     // this.abc ="Ami ajouté : " + this.name;
     this.value = '';
   }

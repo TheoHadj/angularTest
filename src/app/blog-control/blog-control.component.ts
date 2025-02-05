@@ -42,7 +42,7 @@ export class BlogControlComponent {
   // Gestion des articles ajoutés
   onAddArticle(articleData: { title: string; content: string; author: string; date: Date; type: string }) {
     let tmpId = this.articles.length + 1;
-    
+    console.log("c un article");
     let tmp : Article = {id : tmpId, title : articleData.title, content : articleData.content, author : articleData.author, date : articleData.date, type : articleData.type};
     this.articles.push(tmp);
      
@@ -50,6 +50,8 @@ export class BlogControlComponent {
 
   // Gestion des brouillons ajoutés
   onBrouillonAdded(brouillonData: { title: string; content: string; author: string; date: Date; type: string }) {
-   //Ici logique qui contruit un objet brouillon et qui le rajoute au tableau
-}
+    let tmpId = this.articles.length + 1;
+    console.log("c un brouillon");
+    let tmp : Article = {id : tmpId, title : brouillonData.title, content : brouillonData.content, author : brouillonData.author, date : brouillonData.date, type : brouillonData.type};
+    this.articles.push(tmp);}
 }

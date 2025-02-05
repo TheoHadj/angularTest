@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ListFriendsComponent } from './list-friends/list-friends.component';
 import { BlogControlComponent } from './blog-control/blog-control.component';
+import { CommuparentComponent } from './commuparent/commuparent.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'list-friends', component: ListFriendsComponent },
     { path: 'blog', component: BlogControlComponent },
+    { path: 'commu', component: CommuparentComponent },
   ];

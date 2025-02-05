@@ -1,0 +1,13 @@
+<div class="form-container">
+    <h3>Ajouter un nouvel article</h3>
+    <form (ngSubmit)="onSubmit()">
+      <label for="title">Titre :</label>
+      <input type="text" id="title" [(ngModel)]="name" name="name" required>
+  
+      <label for="content">Contenu :</label>
+      <textarea id="content" [(ngModel)]="age" name="age" required></textarea>
+    
+      <button type="submit">Ajouter</button>
+    </form>
+  </div>
+  

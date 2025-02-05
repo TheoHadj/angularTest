@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddArticleComponent {
   @Output() addArticle = new EventEmitter<{ title: string; content: string; author: string; date: Date; type: string }>();
+  @Output() addBrouillon = new EventEmitter<{ title: string; content: string; author: string; date: Date; type: string }>();
 
   title = '';
   content = '';
@@ -22,6 +23,7 @@ export class AddArticleComponent {
       return;
     }
 
+    
     const newArticle = {
       title: this.title,
       content: this.content,
@@ -30,6 +32,12 @@ export class AddArticleComponent {
       type: this.type
     };
 
+    if(newArticle.type === 'brouillon'){
+      this.addBrouillon.emit(newArticle);
+    }
+    else if(newArticle.type === 'article'){
+      this.addBrouillon.emit(newArticle);
+    }
     this.addArticle.emit(newArticle);
 
     this.title = '';

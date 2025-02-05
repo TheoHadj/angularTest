@@ -49,7 +49,7 @@ export class BlogControlComponent {
   }
 
   // Gestion des brouillons ajoutés
-  onBrouillonAdded(brouillonData: { title: string; content: string; author: string; date: Date; type: string }) {
+  onAddBrouillon(brouillonData: { title: string; content: string; author: string; date: Date; type: string }) {
     let tmpId = this.articles.length + 1;
     console.log("c un brouillon");
     let tmp : Article = {id : tmpId, title : brouillonData.title, content : brouillonData.content, author : brouillonData.author, date : brouillonData.date, type : brouillonData.type};

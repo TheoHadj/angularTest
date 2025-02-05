@@ -36,9 +36,8 @@ export class AddArticleComponent {
       this.addBrouillon.emit(newArticle);
     }
     else if(newArticle.type === 'article'){
-      this.addBrouillon.emit(newArticle);
+      this.addArticle.emit(newArticle);
     }
-    this.addArticle.emit(newArticle);
 
     this.title = '';
     this.content = '';

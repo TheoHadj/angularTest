@@ -32,5 +32,10 @@ export class AddArticleComponent {
 
     this.addArticle.emit(newArticle);
 
+    this.title = '';
+    this.content = '';
+    this.author = '';
+    this.type = 'article';
+
   }
 }

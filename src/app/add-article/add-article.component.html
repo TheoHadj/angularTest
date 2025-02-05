@@ -1,0 +1,22 @@
+<div class="form-container">
+    <h3>Ajouter un nouvel article</h3>
+    <form (ngSubmit)="onSubmit()">
+      <label for="title">Titre :</label>
+      <input type="text" id="title" [(ngModel)]="title" name="title" required>
+  
+      <label for="content">Contenu :</label>
+      <textarea id="content" [(ngModel)]="content" name="content" required></textarea>
+  
+      <label for="author">Auteur :</label>
+      <input type="text" id="author" [(ngModel)]="author" name="author" required>
+  
+      <label for="type">Type :</label>
+      <select id="type" [(ngModel)]="type" name="type">
+        <option value="article">Article</option>
+        <option value="brouillon">Brouillon</option>
+      </select>
+  
+      <button type="submit">Ajouter</button>
+    </form>
+  </div>
+  

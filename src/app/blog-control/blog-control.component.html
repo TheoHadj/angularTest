@@ -1,0 +1,9 @@
+<p>blog-control works!</p>
+<app-add-article
+(addArticle)="onAddArticle($event)"
+></app-add-article>
+
+<div *ngFor="let article of articles">
+  <app-article-element
+  [article]="article"
+  ></app-article-element>
